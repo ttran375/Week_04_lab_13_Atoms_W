@@ -7,12 +7,12 @@ namespace Week_01_lab_03_Date_W
         static void Main(string[] args)
         {
             // Test harness methods
-            List<Atom> atoms = new()
-        {
-            new Atom("Hydrogen", 1, 0, 1.008, "H"),
-            new Atom("Helium", 2, 2, 4.0026, "He"),
-            new Atom("Carbon", 6, 6, 12.011, "C")
-        };
+            List<Atom> atoms =
+            [
+                new Atom("Hydrogen", 1, 0, 1.008, "H"),
+                new Atom("Helium", 2, 2, 4.0026, "He"),
+                new Atom("Carbon", 6, 6, 12.011, "C")
+            ];
 
             // Serialize and write atoms to JSON file
             WriteJson(atoms, "atoms.json");
