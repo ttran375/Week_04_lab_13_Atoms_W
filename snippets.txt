@@ -1,2 +1,10 @@
 docker run -e RUN_LOCAL=true -e VALIDATE_JSCPD=fasle -v "$(pwd)":/tmp/lint github/super-linter
-docker run -e RUN_LOCAL=true -v "$(pwd)":/tmp/lint github/super-linter
+docker run -e VALIDATE_CSHARP=true -v "$(pwd)":/tmp/lint github/super-linter
+
+docker run -e VALIDATE_CSHARP=true -v "$(pwd)":/tmp/lint github/super-linter
+docker run -e VALIDATE_CSHARP=true -e GITHUB_SHA=$(git rev-parse HEAD)  -e GITHUB_WORKSPACE=$(pwd) -e GITHUB_EVENT_PATH=/tmp/event.json -v "$(pwd)":/tmp/lint github/super-linter
+echo "{}" > /tmp/event.json
+
+
+
+docker run -e VALIDATE_CSHARP=true -e GITHUB_SHA=$(git rev-parse HEAD) -e GITHUB_WORKSPACE=$(pwd) -e GITHUB_EVENT_PATH=/tmp/event.json -e GITHUB_ORG=datttrian -v "$(pwd)":/tmp/lint github/super-linter

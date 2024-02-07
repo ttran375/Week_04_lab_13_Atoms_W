@@ -90,7 +90,6 @@ namespace Week_04_lab_13_Atoms_W
         public static List<Atom> GetAtoms()
         {
             List<Atom> elements = [Parse("Hydrogen 1 0 1.0079 H"), Parse("Helium 2 2 4.0026 He")];
-;
             elements.Add(Parse("Lithium 3 4 6.941 Li")); ;
             elements.Add(Parse("Beryllium 4 5 9.0122 Be"));
             elements.Add(Parse("Boron 5 6 10.811 B"));
